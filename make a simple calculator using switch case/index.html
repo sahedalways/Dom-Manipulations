@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>make a simple calculator using switch case</title>
+  </head>
+  <body>
+    <script>
+      let num1 = prompt("enter your first number");
+      let opperation = prompt("Enter + or - or * or / ");
+      let num2 = prompt("enter your second number");
+
+      switch (opperation) {
+        case "+":
+          let res = parseInt(num1) + parseInt(num2);
+          console.log(`${num1} + ${num2} = ${res}`);
+          break;
+
+        case "-":
+          let res2 = parseInt(num1) - parseInt(num2);
+          console.log(`${num1} - ${num2} = ${res2}`);
+          break;
+
+        case "*":
+          let res3 = parseInt(num1) * parseInt(num2);
+          console.log(`${num1} * ${num2} = ${res3}`);
+
+          break;
+
+        case "/":
+          let res4 = parseInt(num1) / parseInt(num2);
+          console.log(`${num1} / ${num2} = ${res4}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Find Armstrong Numbers between interval</title>
+  </head>
+  <body>
+    <input type="number" id="base" />
+    <input type="number" id="height" />
+    <button id="btn">Calculate</button>
+    <h2 id="show-data"></h2>
+
+    <script>
+      let a = prompt("Enter a upper number");
+      let b = prompt("Enter a lower number");
+
+      for (let i = a; i <= b; i++) {
+        let temp = i;
+        let noOfDigit = i.toString().length;
+        let sum = 0;
+
+        while (temp > 0) {
+          let digit = temp % 10;
+          temp = parseInt(temp / 10);
+          sum += digit ** noOfDigit;
+        }
+        if (sum == i) {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>

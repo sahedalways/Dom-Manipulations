@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Find armstrong number interval</title>
+  </head>
+  <body>
+    <script>
+      let number = prompt("Please enter a number");
+      let temp = number;
+      let noOfDigit = number.toString().length;
+      let sum = 0;
+
+      while (temp > 0) {
+        let digit = temp % 10;
+        sum += digit ** noOfDigit;
+        temp = parseInt(temp / 10);
+      }
+      if (sum == number) {
+        console.log(`${number} is an armstrong number.`);
+      } else {
+        console.log(`${number} is not an armstrong number.`);
+      }
+    </script>
+  </body>
+</html>
